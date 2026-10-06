@@ -9,7 +9,7 @@ int main()
     int unlocked = 0;
     int i;
 
-    printf("=== PIN-Based Door Lock System ===\n");
+    printf("~~~ PIN-Based Door Lock System ~~~\n");
 
     // Repeats until the correct PIN is entered (so the user can try again after a lockout)
     while (unlocked == 0)
@@ -33,7 +33,7 @@ int main()
             }
             else
             {
-                printf("PIN is exactly 4 digits\n");
+                printf("PIN is Precisely  4 digits\n");
             }
 
             // Check if the PIN is correct
@@ -51,16 +51,16 @@ int main()
         // Too many wrong attempts: lockout
         if (unlocked == 0)
         {
-            printf("\nSystem locked! Wait for 5 seconds...\n");
+            printf("\nSystem locked! Wait for 5 seconds.*.\n");
 
             for (i = 5; i >= 1; i--)
             {
-                printf("%d... ", i);
+                printf("%d~ ", i);
                 fflush(stdout);   // makes the number appear before the delay
                 Sleep(1000);      //1-second delay
             }
 
-            printf("\nYou can try again now.\n");
+            printf("\nYou can give it a shot now.\n");
         }
     }
 
@@ -69,7 +69,7 @@ int main()
 
     do
     {
-        printf("\n=== Device Menu ===\n");
+        printf("\n~~~ Device Menu ~~~\n");
         printf("1. Open Door\n");
         printf("2. Change Username\n");
         printf("3. Change PIN\n");
@@ -98,3 +98,4 @@ int main()
     } while (choice != 4);
 
     return 0;}
+
